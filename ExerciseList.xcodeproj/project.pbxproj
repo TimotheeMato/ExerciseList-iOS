@@ -13,6 +13,9 @@
 		7C5673361FAF91FD009B82AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5673341FAF91FD009B82AF /* Main.storyboard */; };
 		7C5673381FAF91FD009B82AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5673371FAF91FD009B82AF /* Assets.xcassets */; };
 		7C56733B1FAF91FD009B82AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5673391FAF91FD009B82AF /* LaunchScreen.storyboard */; };
+		7C61E4D71FAF95D300A06204 /* ExerciseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61E4D61FAF95D300A06204 /* ExerciseService.swift */; };
+		7C61E4DA1FAF980B00A06204 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61E4D91FAF980B00A06204 /* Exercise.swift */; };
+		7C61E4DD1FAF9AF600A06204 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61E4DC1FAF9AF600A06204 /* DataHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		7C5673371FAF91FD009B82AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C56733A1FAF91FD009B82AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C56733C1FAF91FD009B82AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C61E4D61FAF95D300A06204 /* ExerciseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseService.swift; sourceTree = "<group>"; };
+		7C61E4D91FAF980B00A06204 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		7C61E4DC1FAF9AF600A06204 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,9 @@
 		7C56732F1FAF91FD009B82AF /* ExerciseList */ = {
 			isa = PBXGroup;
 			children = (
+				7C61E4DB1FAF992400A06204 /* Utils */,
+				7C61E4D81FAF980200A06204 /* Models */,
+				7C61E4D51FAF95A400A06204 /* Network */,
 				7C5673301FAF91FD009B82AF /* AppDelegate.swift */,
 				7C5673321FAF91FD009B82AF /* ViewController.swift */,
 				7C5673341FAF91FD009B82AF /* Main.storyboard */,
@@ -86,6 +95,30 @@
 				7C56733C1FAF91FD009B82AF /* Info.plist */,
 			);
 			path = ExerciseList;
+			sourceTree = "<group>";
+		};
+		7C61E4D51FAF95A400A06204 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7C61E4D61FAF95D300A06204 /* ExerciseService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7C61E4D81FAF980200A06204 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7C61E4D91FAF980B00A06204 /* Exercise.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7C61E4DB1FAF992400A06204 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7C61E4DC1FAF9AF600A06204 /* DataHandler.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +219,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ExerciseList/Pods-ExerciseList-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -196,7 +228,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -230,7 +261,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C5673331FAF91FD009B82AF /* ViewController.swift in Sources */,
+				7C61E4DA1FAF980B00A06204 /* Exercise.swift in Sources */,
+				7C61E4D71FAF95D300A06204 /* ExerciseService.swift in Sources */,
 				7C5673311FAF91FD009B82AF /* AppDelegate.swift in Sources */,
+				7C61E4DD1FAF9AF600A06204 /* DataHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

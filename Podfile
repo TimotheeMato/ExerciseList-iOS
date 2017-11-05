@@ -7,7 +7,7 @@ target 'ExerciseList' do
 
   # Pods for ExerciseList
   pod 'Moya'
-  pod 'Moya-ObjectMapper'
+  pod 'ObjectMapper'
   pod 'SDWebImage', '~> 4.0'
   pod 'SQLite.swift', '~> 0.11.4'
 
