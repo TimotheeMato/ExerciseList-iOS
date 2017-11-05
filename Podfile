@@ -6,5 +6,8 @@ target 'ExerciseList' do
   use_frameworks!
 
   # Pods for ExerciseList
+  pod 'Alamofire', '~> 4.5'
+  pod 'SDWebImage', '~> 4.0'
+  pod 'SQLite.swift', '~> 0.11.4'
 
 end
