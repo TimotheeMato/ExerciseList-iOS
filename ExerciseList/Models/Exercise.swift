@@ -19,4 +19,10 @@ class Exercise {
         name = json["name"].string
         imageUrl = json["image_url"].string
     }
+    
+    init(id: Int, name: String, imageUrl: String) {
+        self.id = id
+        self.name = name
+        self.imageUrl = imageUrl
+    }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D21501A58F1597D62F1853D /* Pods_ExerciseList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19303E30BF8FE17E6AEF29CB /* Pods_ExerciseList.framework */; };
+		7C184A2E1FAFC35900680212 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C184A2D1FAFC35900680212 /* DatabaseService.swift */; };
 		7C5673311FAF91FD009B82AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5673301FAF91FD009B82AF /* AppDelegate.swift */; };
 		7C5673331FAF91FD009B82AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5673321FAF91FD009B82AF /* ViewController.swift */; };
 		7C5673361FAF91FD009B82AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5673341FAF91FD009B82AF /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		19303E30BF8FE17E6AEF29CB /* Pods_ExerciseList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExerciseList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23022ADFAC1180753B338499 /* Pods-ExerciseList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExerciseList.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExerciseList/Pods-ExerciseList.release.xcconfig"; sourceTree = "<group>"; };
 		610CE489D8ECD6974A66D95C /* Pods-ExerciseList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExerciseList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExerciseList/Pods-ExerciseList.debug.xcconfig"; sourceTree = "<group>"; };
+		7C184A2D1FAFC35900680212 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		7C56732D1FAF91FD009B82AF /* ExerciseList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExerciseList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5673301FAF91FD009B82AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C5673321FAF91FD009B82AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7C184A2C1FAFC34100680212 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				7C184A2D1FAFC35900680212 /* DatabaseService.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		7C5673241FAF91FD009B82AF = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 		7C56732F1FAF91FD009B82AF /* ExerciseList */ = {
 			isa = PBXGroup;
 			children = (
+				7C184A2C1FAFC34100680212 /* Database */,
 				7C61E4DE1FAFAE6000A06204 /* Views */,
 				7C61E4DB1FAF992400A06204 /* Utils */,
 				7C61E4D81FAF980200A06204 /* Models */,
@@ -272,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C5673331FAF91FD009B82AF /* ViewController.swift in Sources */,
+				7C184A2E1FAFC35900680212 /* DatabaseService.swift in Sources */,
 				7C61E4DA1FAF980B00A06204 /* Exercise.swift in Sources */,
 				7C61E4D71FAF95D300A06204 /* ExerciseService.swift in Sources */,
 				7C5673311FAF91FD009B82AF /* AppDelegate.swift in Sources */,

@@ -22,7 +22,7 @@ class ViewController: UITableViewController {
             self.exerciseList = response
             self.tableView.reloadData()
         }, failure: {
-            print("Error")
+            print("Error while fetching the data")
         })
     }
 
