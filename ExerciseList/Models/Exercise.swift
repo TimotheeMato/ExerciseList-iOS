@@ -7,20 +7,16 @@
 //
 
 import Foundation
-import ObjectMapper
+import SwiftyJSON
 
-class Exercise: Mappable {
+class Exercise {
     var id: Int?
     var name: String?
     var imageUrl: String?
     
-    required init?(map: Map) {
-        
-    }
-    
-    func mapping(map: Map) {
-        id <- map["id"]
-        name <- map["name"]
-        imageUrl <- map["image_url"]
+    init(json: JSON) {
+        id = json["id"].int
+        name = json["name"].string
+        imageUrl = json["image_url"].string
     }
 }

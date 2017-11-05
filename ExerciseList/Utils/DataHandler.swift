@@ -8,22 +8,29 @@
 
 import Foundation
 import Moya
+import SwiftyJSON
 
 class DataHandler {
     let provider = MoyaProvider<ExerciseService>()
     
-    public func getAllExercises() {
+    public func getAllExercises(completion: @escaping ([Exercise]) -> Void, failure: @escaping () -> Void) {
         provider.request(.getExercises) { result in
             switch result {
             case let .success(moyaResponse):
-                do {
-                    let data = try moyaResponse.mapJSON()
-                    print("\(data)")
-                } catch {
-                    print("Error")
+                let data = moyaResponse.data
+                let json = JSON(data: data)
+                if json["data"].array != nil {
+                    var exerciseList = [Exercise]()
+                    for (_, subJson):(String, JSON) in json["data"] {
+                        exerciseList.append(Exercise(json: subJson))
+                    }
+                    completion(exerciseList)
+                } else {
+                    failure()
                 }
+                
             case let .failure(error):
-                break
+                failure()
             }
         }
     }
