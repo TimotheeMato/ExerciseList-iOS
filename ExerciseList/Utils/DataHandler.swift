@@ -15,7 +15,7 @@ class DataHandler {
     var databaseService: DatabaseService!
     
     public func getAllExercises(completion: @escaping ([Exercise]) -> Void, failure: @escaping () -> Void) {
-        let exerciseListDb = [Exercise]()
+        var exerciseListDb = [Exercise]()
         do {
             databaseService = try DatabaseService()
             exerciseListDb = try databaseService.getAllExercises()
